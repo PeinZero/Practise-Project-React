@@ -1,13 +1,12 @@
 import React from 'react';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 import classes from './Structure.module.css'
+import Toolbar from '../Navigation/Toolbar/Toolbar'
 
 const structure = (props) => {
     return(
         <Auxiliary>
-            <div>
-                Toolbar, Sidebar, Backdrop
-            </div>
+            <Toolbar/>
             <main className = {classes.Content}> 
                 {props.children}
             </main>

@@ -1,4 +1,6 @@
 import Auxiliary from '../../../hoc/Auxiliary/Auxiliary'
+import Button from '../../UI/Button/Button'
+
 const orderSummary = (props) =>{
     const ingredientSummary = Object.keys(props.ingredients)
         .map(ing => {
@@ -11,7 +13,10 @@ const orderSummary = (props) =>{
             <ul>
                 {ingredientSummary}
             </ul>
+            <p><strong>Total Price: ${props.price}</strong> </p>
             <p>Continue to Checkout?</p>
+            <Button btnType="Danger" clicked={props.cancel}>CANCEL</Button>
+            <Button btnType="Success" clicked={props.confirm}>CONFIRM</Button>
         </Auxiliary>
     );
 }
