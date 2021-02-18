@@ -8,7 +8,7 @@ class App extends Component{
     return(
       <Auxiliary>
         <Structure>
-          <BurgerMaker/>
+          <BurgerMaker/> 
         </Structure>
       </Auxiliary>
     );
